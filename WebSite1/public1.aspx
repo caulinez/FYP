@@ -1,16 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="public1.aspx.cs" Inherits="public1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="public1.aspx.cs" Inherits="public1" MasterPageFile="~/MasterPage.master" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<asp:Content ID="PublicHead" ContentPlaceHolderID="Head" runat="server">
+    <!--custom styles and hacks here-->
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="PublicContent" ContentPlaceHolderID="MainContent" runat="server">
     <div>
-    
-        public page</div>
-    </form>
-</body>
-</html>
+        <h1>public page</h1>
+    </div>
+</asp:Content>
