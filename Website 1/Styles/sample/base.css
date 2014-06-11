@@ -1,0 +1,47 @@
+﻿
+body {width:960px; margin:0px auto; font-size:13px; line-height:16px; font-family:Helvetica, Arial; color:#333333; background-color:#2f0209; background-image:url('../image/bg_img.jpg'); background-repeat:repeat-x;}
+
+/*--------- Global Style -----------*/
+img {border:none;}
+.iHide {display:none;}
+.rgt {float:right;}
+.lft {float:left;}
+.clr-both {clear:both;}
+/*--------- Global Style -----------*/
+
+.container {background-color:#ffffff; width:960px; clear:both;}
+
+.topbar {height:85px; clear:both; background-color:#e2c694; background-image:url('../image/topbg_img.jpg'); background-repeat:repeat-x;}
+.topbar .logo {margin-left:15px; width:146px; height:34px; padding:15px 0;}
+.topbar .auxiLink {font-size:107.69%; color:#666666; padding-top:15px; margin-right:5px;}
+.topbar .auxiLink a {color:#666666; text-decoration:none;}
+.topbar .auxiLink a:hover {color:#990000; text-decoration:underline;}
+
+.mid {}
+.mid .mainNavi {width:100%; height:18px; padding:5px 0px 2px 0px; font-weight:bold; background-color:#ecd5a9; background-image:url('../image/navibg_img.jpg'); background-repeat:repeat;}
+.mid .mainNavi ul {margin:0px; padding:0px; list-style:none; margin-left:5px;}
+.mid .mainNavi ul li {background-color:#f6eedd; display:inline-block; margin-right:2px}
+.mid .mainNavi ul li a {background:#f6eedd; color:#00002d; text-decoration:none; padding:5px 10px 5px 10px;}
+.mid .mainNavi ul li a:hover {background-color:#ecddbe;}
+
+.mst {}
+.mst .bnr {width:100%; height:100px;}
+
+.main {margin:0px 10px;}
+.main .breadcrumb {font-size:84.62%; font-weight:bold; height:30px; margin:8px 0px; color:#696969;} 
+.main .breadcrumb a {color:#990000; text-decoration:none;}
+.main .breadcrumb a:hover {text-decoration:underline;}
+.main .bdy {min-height:330px; height:auto !important; height:330px;}
+
+.btmbar {border-top:solid 1px #999999; padding:10px 10px 5px 10px; font-size:84.62%; height:20px; background-color:#e5cb9a;}
+.btmbar .copyright {}
+.btmbar .copyright a {color:#666666; text-decoration:none;}
+.btmbar .copyright a:hover {color:#990000; text-decoration:underline;}
+.btmbar .btmNavi {}
+.btmbar .btmNavi a {color:#666666; text-decoration:none;}
+.btmbar .btmNavi a:hover {color:#990000; text-decoration:underline;}
+
+.disclaimer {font-size:76.92%; height:10px; margin:2px 5px; color:#ffffff; padding:2px 0px 15px 0px;}
+.disclaimer img {vertical-align:sub;}
+
+img.load {vertical-align:middle;}

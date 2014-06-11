@@ -38,6 +38,8 @@ public partial class Home : System.Web.UI.Page
             Response.Redirect("admin.aspx");
         }
         conn.Close();*/
+
+        
         DataClassesDataContext dc = new DataClassesDataContext();
 
         var userInfo = from q in dc.userInfos where  
@@ -45,20 +47,30 @@ public partial class Home : System.Web.UI.Page
                        && q.Password == TextBoxPW.Text
                        select q;
 
+
         foreach (var userInfo1 in userInfo)
         {
             if (userInfo1.Role == "admin")
             {
+       UserInfoClass currentUser = new UserInfoClass();
+       currentUser.UserName = TextBoxUN.Text;
+       Session["UserInfo"] = currentUser;
                 Response.Redirect("admin.aspx");
             }
             else if (userInfo1.Role == "student")
             {
+                UserInfoClass currentUser = new UserInfoClass();
+                currentUser.UserName = TextBoxUN.Text;
+                Session["UserInfo"] = currentUser;
                 Response.Redirect("student.aspx");
             }
 
             else if (userInfo1.Role == "public")
             {
-                Response.Redirect("public.aspx");
+                UserInfoClass currentUser = new UserInfoClass();
+                currentUser.UserName = TextBoxUN.Text;
+                Session["UserInfo"] = currentUser;
+                Response.Redirect("public1.aspx");
             }
         }
 

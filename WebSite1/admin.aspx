@@ -11,21 +11,48 @@
     <div>
     
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-            DataSourceID="SqlDataSource1">
+            DataSourceID="SqlDataSource1" DataKeyNames="ProjectID">
             <Columns>
+                <asp:TemplateField HeaderText="ProjectID" InsertVisible="False" 
+                    SortExpression="ProjectID">
+                    <ItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("ProjectID") %>'></asp:Label>
+                    </ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("ProjectID") %>'></asp:Label>
+                    </EditItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="Username" HeaderText="Username" 
                     SortExpression="Username" />
-                <asp:BoundField DataField="Password" HeaderText="Password" 
-                    SortExpression="Password" />
-                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                <asp:BoundField DataField="Role" HeaderText="Role" SortExpression="Role" />
+                <asp:BoundField DataField="ProjectName" HeaderText="ProjectName" 
+                    SortExpression="ProjectName" />
+                <asp:BoundField DataField="ProjectDesc" HeaderText="ProjectDesc" 
+                    SortExpression="ProjectDesc" />
+                <asp:BoundField DataField="Status" HeaderText="Status" 
+                    SortExpression="Status" />
+                <asp:TemplateField AccessibleHeaderText="To Approve" HeaderText="To Approve">
+                    <ItemTemplate>
+                        <asp:CheckBox ID="Approve" runat="server" />
+                    </ItemTemplate>
+                </asp:TemplateField>
             </Columns>
+            <EmptyDataTemplate>
+                <asp:CheckBox ID="CheckBox1" runat="server" />
+            </EmptyDataTemplate>
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-            SelectCommand="SELECT * FROM [userInfo]"></asp:SqlDataSource>
+            SelectCommand="SELECT * FROM [Project] WHERE ([Status] = @Status)">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="created" Name="Status" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
     
     </div>
+    <p>
+        <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
+            Text="Approve" />
+    </p>
     </form>
 </body>
 </html>
