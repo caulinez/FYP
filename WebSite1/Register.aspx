@@ -1,16 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="Register" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="Register" MasterPageFile="~/MasterPage.master" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<script runat="server">
-
-    protected void TextBox2_TextChanged(object sender, EventArgs e)
-    {
-
-    }
-</script>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
+<asp:Content ID="RegisterHead" ContentPlaceHolderID="Head" runat="server">
+    <!--custom styles and hacks here-->
     <style type="text/css">
         .style1
         {
@@ -21,9 +12,19 @@
             width: 119px;
         }
     </style>
-</head>
-<body>
-    <form id="form1" runat="server">
+</asp:Content>
+
+<asp:Content ID="RegisterScripts" ContentPlaceHolderID="Scripts" runat="server">
+<script runat="server">
+
+    protected void TextBox2_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+</script>
+</asp:Content>
+
+<asp:Content ID="RegisterContent" ContentPlaceHolderID="MainContent" runat="server">
     <div>
     
         Registration<br />
@@ -81,6 +82,4 @@
     <p>
                     <asp:Button ID="Button1" runat="server" Text="Submit" onclick="Button1_Click" />
                 </p>
-    </form>
-</body>
-</html>
+</asp:Content>
