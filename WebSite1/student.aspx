@@ -5,7 +5,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div>
-<<<<<<< HEAD
     
         <br />
         Welcome
@@ -25,12 +24,4 @@
         <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Submit" />
         <br />
     </div>
-    </form>
-</body>
-</html>
-=======
-        <h2>
-            This will be the student page.</h2>
-    </div>
 </asp:Content>
->>>>>>> eecd7f9e36f7f84023591b9a496979c920f13827
